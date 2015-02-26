@@ -15,7 +15,8 @@ The port on which the server starts is taken from an environment variable, so af
 
 ## Examples:
 
-```$ curl -X POST https://arcane-sands-6945.herokuapp.com/user -d email=test@test.com -d firstName=Jack -d lastName=White
+```
+$ curl -X POST https://arcane-sands-6945.herokuapp.com/user -d email=test@test.com -d firstName=Jack -d lastName=White
 {"userId":1,"email":"test@test.com","firstName":"Jack","lastName":"White","points":0}
 
 $ curl -X GET https://arcane-sands-6945.herokuapp.com/user/1
@@ -41,5 +42,5 @@ $ curl -X GET https://arcane-sands-6945.herokuapp.com/user/1
 
 $ curl -X GET https://arcane-sands-6945.herokuapp.com/user/1/transfers
 [{"id":1,"userId":1,"amount":10},{"id":2,"userId":1,"amount":-10}]
-
+```
 
