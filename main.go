@@ -21,6 +21,7 @@ func main() {
 
 	r := mux.NewRouter()
 
+	// Register API routes.
 	post := r.Methods("POST").Subrouter()
 	post.HandleFunc("/user", api.WithContext(api.NewUser))
 	post.HandleFunc("/user/{userId:[0-9]+}/transfer",
