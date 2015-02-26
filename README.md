@@ -2,7 +2,7 @@
 
 ## Installation
 
-The project is set up according to the Go standards, so commands such as `go install` and `go build` should work.
+The project is set up according to the Go standards, so commands such as `go install` and `go build` should work. You may need to install some dependencies, which `godep` might help with.
 
 The port on which the server starts is taken from an environment variable, so after building, start with: `PORT=1234 button`.
 
