@@ -1,1 +1,1 @@
-web: button
+web: button -dbUrl=$DATABASE_URL
