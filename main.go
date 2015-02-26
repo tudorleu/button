@@ -7,9 +7,11 @@ import (
 	"github.com/tudorleu/button/models"
 	"log"
 	"net/http"
+	"os"
 )
 
-var dbUrl = flag.String("dbUrl", "postgres://tudor@localhost/button?sslmode=disable",
+var dbUrl = flag.String("dbUrl",
+	"postgres://tudor@localhost/button?sslmode=disable",
 	"Url for the postgres db.")
 
 func main() {
@@ -29,7 +31,7 @@ func main() {
 	get.HandleFunc("/user/{userId:[0-9]+}/transfers",
 		api.WithContext(api.GetTransfers))
 
-	err := http.ListenAndServe(":1234", r)
+	err := http.ListenAndServe(os.Getenv("PORT"), r)
 	if err != nil {
 		log.Fatal(err)
 	}
