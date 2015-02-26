@@ -31,7 +31,7 @@ func main() {
 	get.HandleFunc("/user/{userId:[0-9]+}/transfers",
 		api.WithContext(api.GetTransfers))
 
-	err := http.ListenAndServe(os.Getenv("PORT"), r)
+	err := http.ListenAndServe(":"+os.Getenv("PORT"), r)
 	if err != nil {
 		log.Fatal(err)
 	}
